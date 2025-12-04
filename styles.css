@@ -121,23 +121,29 @@ body {
   font-size: 14px;
 }
 
-/* HERO IMAGES */
+/* HERO IMAGES – FIXED */
 .hero-photo-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
+  gap: 12px;
+  grid-template-columns: 1fr;
 }
 
 .hero-photo-grid img {
-  height: 130px;
   width: 100%;
+  height: 220px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 14px;
 }
 
-.hero-photo-grid img:last-child {
-  grid-column: span 2;
-  height: 170px;
+/* DESKTOP HERO IMAGES */
+@media (min-width: 768px) {
+  .hero-photo-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .hero-photo-grid img {
+    height: 200px;
+  }
 }
 
 /* BUTTONS */
